@@ -35,10 +35,8 @@
             this.DecodeImageTSB = new System.Windows.Forms.ToolStripButton();
             this.OpenFileDLG = new System.Windows.Forms.OpenFileDialog();
             this.PicBoxNew = new System.Windows.Forms.PictureBox();
-            this.PicBxDecoded = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxNew)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBxDecoded)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -96,21 +94,11 @@
             this.PicBoxNew.TabIndex = 1;
             this.PicBoxNew.TabStop = false;
             // 
-            // PicBxDecoded
-            // 
-            this.PicBxDecoded.Enabled = false;
-            this.PicBxDecoded.Location = new System.Drawing.Point(13, 28);
-            this.PicBxDecoded.Name = "PicBxDecoded";
-            this.PicBxDecoded.Size = new System.Drawing.Size(453, 366);
-            this.PicBxDecoded.TabIndex = 2;
-            this.PicBxDecoded.TabStop = false;
-            // 
             // ImageDecoder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 406);
-            this.Controls.Add(this.PicBxDecoded);
             this.Controls.Add(this.PicBoxNew);
             this.Controls.Add(this.toolStrip1);
             this.Name = "ImageDecoder";
@@ -118,7 +106,6 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxNew)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBxDecoded)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,7 +119,6 @@
         private System.Windows.Forms.ToolStripComboBox ComboBoxTSB1;
         private System.Windows.Forms.PictureBox PicBoxNew;
         private System.Windows.Forms.ToolStripButton DecodeImageTSB;
-        private System.Windows.Forms.PictureBox PicBxDecoded;
     }
 }
 
