@@ -92,32 +92,32 @@ namespace CMPE2300BrandonFooteLab1
                     {
                         for (int count2 = 0; count2 < width; count2++)
                         {
-                            if (original.GetPixel(count2, count1).B % 2 == 1 && original.GetPixel(count2, count1).R % 2 == 0 && original.GetPixel(count2, count1).G % 2 == 0)
+                            if (original.GetPixel(count2, count1).B % 2 == 1)
                             {
                                 decoded.SetPixel(count2, count1, Color.FromArgb(original.GetPixel(count2, count1).R, original.GetPixel(count2, count1).G, 255));
                             }
-                            //else
-                            //{
-                            //    decoded.SetPixel(count2, count1, Color.FromArgb(decoded.GetPixel(count2, count1).R, decoded.GetPixel(count2, count1).G, 0));
-                            //}
+                            else
+                            {
+                                decoded.SetPixel(count2, count1, Color.FromArgb(decoded.GetPixel(count2, count1).R, decoded.GetPixel(count2, count1).G, 0));
+                            }
 
-                            if (original.GetPixel(count2, count1).G % 2 == 1 && original.GetPixel(count2, count1).B % 2 == 0 && original.GetPixel(count2, count1).R % 2 == 0)
+                            if (original.GetPixel(count2, count1).G % 2 == 1)
                             {
                                 decoded.SetPixel(count2, count1, Color.FromArgb(decoded.GetPixel(count2, count1).R, 255, decoded.GetPixel(count2, count1).B));
                             }
-                            //else
-                            //{
-                            //    decoded.SetPixel(count2, count1, Color.FromArgb(decoded.GetPixel(count2, count1).R, 0, decoded.GetPixel(count2, count1).B));
-                            //}
+                            else
+                            {
+                                decoded.SetPixel(count2, count1, Color.FromArgb(decoded.GetPixel(count2, count1).R, 0, decoded.GetPixel(count2, count1).B));
+                            }
 
-                            if (original.GetPixel(count2, count1).R % 2 == 1 && original.GetPixel(count2, count1).B % 2 == 0 && original.GetPixel(count2, count1).G % 2 == 0)
+                            if (original.GetPixel(count2, count1).R % 2 == 1)
                             {
                                 decoded.SetPixel(count2, count1, Color.FromArgb(255, decoded.GetPixel(count2, count1).G, decoded.GetPixel(count2, count1).B));
                             }
-                            //else
-                            //{
-                            //    decoded.SetPixel(count2, count1, Color.FromArgb(0, decoded.GetPixel(count2, count1).G, decoded.GetPixel(count2, count1).B));
-                            //}
+                            else
+                            {
+                                decoded.SetPixel(count2, count1, Color.FromArgb(0, decoded.GetPixel(count2, count1).G, decoded.GetPixel(count2, count1).B));
+                            }
                         }
                     }
                 }
