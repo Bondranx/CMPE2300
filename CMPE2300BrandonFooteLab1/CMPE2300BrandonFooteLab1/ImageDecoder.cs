@@ -124,5 +124,41 @@ namespace CMPE2300BrandonFooteLab1
                 PicBoxNew.Image = decoded;
                 decoded = null;
         }
+
+            private void tsbtnASCII_Click(object sender, EventArgs e)
+            {
+                int width = original.Width;
+                int height = original.Height;
+                int count3 = 0;
+                byte newByte = 0;
+                int result = 0;
+
+                for (int count = 0; count < height; count++)
+                {
+                    for (int count2 = 0; count2 < width; count2++)
+                    {
+                        
+                        result = original.GetPixel(count2, count).B % 2;
+
+                        newByte += (byte)result;
+                        count3++;
+                        
+                        
+                        if(count3==8)
+                        {
+                            count3 = 0;
+                            if(newByte!=0xFF)
+                            {
+                                Console.Write((char)newByte);
+                            }
+                            
+                            newByte = 0;
+                        }
+                        newByte = (byte)(newByte<<1);
+                    }
+                }
+            }
+
+
     }
 }

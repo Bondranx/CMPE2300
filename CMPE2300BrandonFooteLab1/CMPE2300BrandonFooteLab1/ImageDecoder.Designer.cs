@@ -35,6 +35,7 @@
             this.DecodeImageTSB = new System.Windows.Forms.ToolStripButton();
             this.OpenFileDLG = new System.Windows.Forms.OpenFileDialog();
             this.PicBoxNew = new System.Windows.Forms.PictureBox();
+            this.tsbtnASCII = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxNew)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +45,8 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LoadImageTSB,
             this.ComboBoxTSB1,
-            this.DecodeImageTSB});
+            this.DecodeImageTSB,
+            this.tsbtnASCII});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(478, 25);
@@ -94,6 +96,16 @@
             this.PicBoxNew.TabIndex = 1;
             this.PicBoxNew.TabStop = false;
             // 
+            // tsbtnASCII
+            // 
+            this.tsbtnASCII.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbtnASCII.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnASCII.Image")));
+            this.tsbtnASCII.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnASCII.Name = "tsbtnASCII";
+            this.tsbtnASCII.Size = new System.Drawing.Size(82, 22);
+            this.tsbtnASCII.Text = "Decode ASCII";
+            this.tsbtnASCII.Click += new System.EventHandler(this.tsbtnASCII_Click);
+            // 
             // ImageDecoder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,6 +131,7 @@
         private System.Windows.Forms.ToolStripComboBox ComboBoxTSB1;
         private System.Windows.Forms.PictureBox PicBoxNew;
         private System.Windows.Forms.ToolStripButton DecodeImageTSB;
+        private System.Windows.Forms.ToolStripButton tsbtnASCII;
     }
 }
 
