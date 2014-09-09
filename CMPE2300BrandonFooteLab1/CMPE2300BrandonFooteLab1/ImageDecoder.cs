@@ -132,6 +132,7 @@ namespace CMPE2300BrandonFooteLab1
                 int count3 = 0;
                 byte newByte = 0;
                 int result = 0;
+                string newString ="";
 
                 for (int count = 0; count < height; count++)
                 {
@@ -149,16 +150,21 @@ namespace CMPE2300BrandonFooteLab1
                             count3 = 0;
                             if(newByte!=0xFF)
                             {
-                                Console.Write((char)newByte);
+                                newString += (char)newByte;
+                                newByte = 0;
+                            }
+                            else if(newByte==0xFF)
+                            {                                
+                                MessageBox.Show(newString,"Decoded ASCII",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                                count = height;
+                                count2 = width;
                             }
                             
-                            newByte = 0;
                         }
                         newByte = (byte)(newByte<<1);
                     }
                 }
+                
             }
-
-
     }
 }
