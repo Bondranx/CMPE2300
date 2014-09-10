@@ -156,8 +156,7 @@ namespace CMPE2300BrandonFooteLab1
                             else if(newByte==0xFF)
                             {                                
                                 MessageBox.Show(newString,"Decoded ASCII",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                                count = height;
-                                count2 = width;
+
                             }
                             
                         }
