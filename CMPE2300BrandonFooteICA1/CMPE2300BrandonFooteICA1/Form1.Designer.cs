@@ -1,6 +1,6 @@
 ﻿namespace CMPE2300BrandonFooteICA1
 {
-    partial class Form1
+    partial class frmTrekLight
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.tickTimer = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // tickTimer
+            // 
+            this.tickTimer.Enabled = true;
+            this.tickTimer.Tick += new System.EventHandler(this.tickTimer_Tick);
+            // 
+            // frmTrekLight
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Name = "frmTrekLight";
+            this.Text = "Trek Light";
+            this.Load += new System.EventHandler(this.frmTrekLight_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmTrekLight_KeyDown);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer tickTimer;
     }
 }
 

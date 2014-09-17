@@ -8,14 +8,14 @@ using System.Drawing;
 
 namespace CMPE2300BrandonFooteICA1
 {
-    internal class TrekLight
+    public class TrekLight
     {
         private Color _LightColor;
         private byte _byThreshold;
         private byte _byTick;
         private int _Border;
 
-        Random _newRandom = new Random(0);
+        Random _newRandom = new Random();
 
         public TrekLight(Color LightColor, byte byThreshold, int Border=0)
         {
@@ -28,6 +28,7 @@ namespace CMPE2300BrandonFooteICA1
             _LightColor = Color.FromArgb(_newRandom.Next(0,255), _newRandom.Next(0,255), _newRandom.Next(0,255));
             _byThreshold = 64;
             _Border = 5;
+            
         }
 
         public void Tick()
@@ -36,6 +37,12 @@ namespace CMPE2300BrandonFooteICA1
         }
         public void Render(CDrawer Canvas, int LightNumber)
         {
+            if(_byTick>_byThreshold)
+            {
+                _LightColor = Color.FromArgb(_newRandom.Next(0,255), _newRandom.Next(0,255), _newRandom.Next(0,255));
+                Canvas.AddRectangle(LightNumber % Canvas.ScaledWidth, LightNumber / Canvas.ScaledWidth, 1, 1, _LightColor, _Border, Color.Black);
+                _byTick = 0;
+            }
 
         }
     }
