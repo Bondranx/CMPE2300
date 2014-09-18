@@ -43,3 +43,46 @@ print case @CurrentDate
 	else 'is a Weekday'
 end
 
+--Question 4
+
+Declare @RandomAmount as integer = (9999 * rand())+1
+Declare @RandomNumber as integer
+Declare @Count10 as integer = 0
+Declare @Count20 as integer = 0
+Declare @Count30 as integer = 0
+Declare @Count40 as integer = 0
+Declare @Count50 as integer = 0
+Declare @Count as integer = 0
+while @count < @RandomAmount
+	begin
+		set @RandomNumber = (49*rand())+1
+		if @RandomNumber >= 40
+			begin
+				set @Count50 = @Count50 + 1
+			end
+		else if @RandomNumber >= 30
+			begin
+				set @Count40 = @Count40 + 1
+			end
+		else if @RandomNumber >= 20
+			begin
+				set @Count30 = @Count30 + 1
+			end
+		else if @RandomNumber >= 10 
+			begin
+				set @Count20 = @Count20 + 1
+			end
+		else if @RandomNumber >= 0
+			begin
+				set @Count10 = @Count10 + 1
+			end
+			set @Count = @Count +1
+		end
+Print 'The number of values between 1 and 10 is:' + cast(@Count10 as varchar(6))
+Print 'The number of values between 11 and 20 is:' + cast(@Count20 as varchar(6))
+Print 'The number of values between 21 and 30 is:' + cast(@Count30 as varchar(6))
+Print 'The number of values between 31 and 40 is:' + cast(@Count40 as varchar(6))
+Print 'The number of values between 41 and 50 is:' + cast(@Count50 as varchar(6))
+
+--Question 5
+
