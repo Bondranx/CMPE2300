@@ -1,4 +1,5 @@
---Question 1
+----Question 1
+
 declare @Max as int = 1000000
 declare @newrandom as int = (((@max)*rand())+1)
 if(@newrandom % 2 = 0)
@@ -12,9 +13,10 @@ begin
 	print 'The number is odd'
 end
 
-print ''
+--print ''
 
---Question 2
+----Question 2
+
 Declare @newMax as int = 101
 Declare @NewRandom2 as decimal(4,2) = (((@newMax)*rand())-1)
 Declare @LetterGrade as varchar(2)
@@ -33,7 +35,7 @@ print case
 	else 'Grade = F    GPA = 0   Descriptor = Fail'
 end
 
---Question 3
+----Question 3
 
 declare @CurrentDate as nvarchar(15) = datename(Weekday,getdate())
 print @CurrentDate
@@ -43,7 +45,7 @@ print case @CurrentDate
 	else 'is a Weekday'
 end
 
---Question 4
+----Question 4
 
 Declare @RandomAmount as integer = (9999 * rand())+1
 Declare @RandomNumber as integer
@@ -85,4 +87,40 @@ Print 'The number of values between 31 and 40 is:' + cast(@Count40 as varchar(6)
 Print 'The number of values between 41 and 50 is:' + cast(@Count50 as varchar(6))
 
 --Question 5
+
+--Alter function ParseString
+--(
+--	@InputString	as char(100)
+--)
+--returns char(100)
+--as
+--begin
+--	declare @Counter as integer = 1
+--	declare @OutputString as varchar(100) = ''
+--	declare @TempString as varchar(100)
+--	declare @Holder as integer
+--	while (@Counter <= len(@InputString))
+--	begin
+--		 set @TempString = substring (@InputString, @Counter, 1)
+--		 set @Holder = ascii (@TempString)
+--		 if @Holder = 97 OR @Holder = 101 OR @Holder = 105 OR @Holder = 111 OR @Holder = 117
+--			begin
+--				set @TempString = Char(@Holder - 32)
+--			end  
+--		 else 
+--			begin
+--				set @TempString = Lower (Char (@Holder))
+--			end
+--		set @OutputString += @TempString
+--		set @Counter = @Counter + 1
+--		--print @TempString
+--	end
+--	return @OutputString
+--end
+--go
+
+print dbo.ParseString('This IS A StRinG')
+
+--Question 6
+
 
