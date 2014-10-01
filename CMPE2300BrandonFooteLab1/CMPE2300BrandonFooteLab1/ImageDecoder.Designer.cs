@@ -33,9 +33,9 @@
             this.LoadImageTSB = new System.Windows.Forms.ToolStripButton();
             this.ComboBoxTSB1 = new System.Windows.Forms.ToolStripComboBox();
             this.DecodeImageTSB = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnASCII = new System.Windows.Forms.ToolStripButton();
             this.OpenFileDLG = new System.Windows.Forms.OpenFileDialog();
             this.PicBoxNew = new System.Windows.Forms.PictureBox();
-            this.tsbtnASCII = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxNew)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +83,16 @@
             this.DecodeImageTSB.Text = "Decode Image";
             this.DecodeImageTSB.Click += new System.EventHandler(this.DecodeImageTSB_Click);
             // 
+            // tsbtnASCII
+            // 
+            this.tsbtnASCII.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbtnASCII.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnASCII.Image")));
+            this.tsbtnASCII.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnASCII.Name = "tsbtnASCII";
+            this.tsbtnASCII.Size = new System.Drawing.Size(82, 22);
+            this.tsbtnASCII.Text = "Decode ASCII";
+            this.tsbtnASCII.Click += new System.EventHandler(this.tsbtnASCII_Click);
+            // 
             // OpenFileDLG
             // 
             this.OpenFileDLG.Filter = "Bmp files|*.bmp|All Files|*.*";
@@ -96,16 +106,6 @@
             this.PicBoxNew.TabIndex = 1;
             this.PicBoxNew.TabStop = false;
             // 
-            // tsbtnASCII
-            // 
-            this.tsbtnASCII.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbtnASCII.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnASCII.Image")));
-            this.tsbtnASCII.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnASCII.Name = "tsbtnASCII";
-            this.tsbtnASCII.Size = new System.Drawing.Size(82, 22);
-            this.tsbtnASCII.Text = "Decode ASCII";
-            this.tsbtnASCII.Click += new System.EventHandler(this.tsbtnASCII_Click);
-            // 
             // ImageDecoder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +115,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "ImageDecoder";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.ImageDecoder_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxNew)).EndInit();
