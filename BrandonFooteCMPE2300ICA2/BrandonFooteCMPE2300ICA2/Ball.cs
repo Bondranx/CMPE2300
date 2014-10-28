@@ -56,7 +56,9 @@ namespace BrandonFooteCMPE2300ICA2
         }
         public void ShowBall(CDrawer Canvas)
         {
-            Canvas.AddCenteredEllipse(_LocationCenter.X,_LocationCenter.Y,_BallRadius,_BallRadius,Color.FromArgb(_BallOpacity,_BallColor.R,_BallColor.G,_BallColor.B));
+            Canvas.AddCenteredEllipse(_LocationCenter.X,_LocationCenter.Y,
+                _BallRadius,_BallRadius,Color.FromArgb(_BallOpacity,
+                _BallColor.R,_BallColor.G,_BallColor.B));
         }
     }
 }

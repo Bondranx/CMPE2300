@@ -51,7 +51,8 @@ namespace CMPE2300BrandonFooteICA3
 
         public void ShowBall()
         {
-            _Canvas.AddCenteredEllipse(_Point.X, _Point.Y, _Radius, _Radius, Color.FromArgb(_iAlive, _Color));
+            _Canvas.AddCenteredEllipse(_Point.X, _Point.Y,
+                _Radius, _Radius, Color.FromArgb(_iAlive, _Color));
         }
 
         public void MoveBall()

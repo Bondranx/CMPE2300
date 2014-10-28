@@ -63,5 +63,51 @@ namespace CMEP2300BrandonFooteICA5
             }
             while (count < 25 && discardCount <1000);
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            blockList.Clear();
+            Block.blockSwitch = false;
+            Block.blockSwitch = true;
+        }
+
+        private void rdbtnSize_Click(object sender, EventArgs e)
+        {
+            Block.newSort = ESortType.eSize;
+            blockList.Sort();
+            Block.blockSwitch = true;
+            foreach (Block i in blockList)
+            {
+                i.AddBlock();
+                System.Threading.Thread.Sleep(100);
+                Block.blockSwitch = false;
+            }
+        }
+
+        private void rdbtnDistance_Click(object sender, EventArgs e)
+        {
+            Block.newSort = ESortType.eDistance;
+            blockList.Sort();
+            Block.blockSwitch = true;
+            foreach (Block i in blockList)
+            {
+                i.AddBlock();
+                System.Threading.Thread.Sleep(100);
+                Block.blockSwitch = false;
+            }
+        }
+
+        private void rdbtnColor_Click(object sender, EventArgs e)
+        {
+            Block.newSort = ESortType.eColor;
+            blockList.Sort();
+            Block.blockSwitch = true;
+            foreach (Block i in blockList)
+            {
+                i.AddBlock();
+                System.Threading.Thread.Sleep(100);
+                Block.blockSwitch = false;
+            }
+        }
     }
 }

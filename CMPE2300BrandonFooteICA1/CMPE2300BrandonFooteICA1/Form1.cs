@@ -50,12 +50,17 @@ namespace CMPE2300BrandonFooteICA1
             }
             else if(e.KeyCode == Keys.G)
             {
-                TrekLightList.Add(new TrekLight(Color.FromArgb(newRandom.Next(0,255),newRandom.Next(0,255),newRandom.Next(0,255)),(byte)newRandom.Next(40,200),4));
+                TrekLightList.Add(new TrekLight(Color.FromArgb(newRandom.Next(0,255),
+                    newRandom.Next(0,255),newRandom.Next(0,255)),
+                    (byte)newRandom.Next(40,200),4));
             }
             else if (e.KeyCode == Keys.C && TrekLightList.Count > 0)
             {
                 TrekLightList.RemoveAt(TrekLightList.Count-1);
-                newCanvas.AddRectangle(TrekLightList.Count % newCanvas.ScaledWidth, TrekLightList.Count / newCanvas.ScaledWidth, 1, 1, Color.Black, 5, Color.Black);
+                newCanvas.AddRectangle(TrekLightList.Count % 
+                    newCanvas.ScaledWidth, TrekLightList.Count 
+                    / newCanvas.ScaledWidth, 1, 1, Color.Black, 
+                    5, Color.Black);
             }
         }
     }

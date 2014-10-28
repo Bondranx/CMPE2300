@@ -30,9 +30,9 @@ namespace CMPE2300BrandonFooteICA4
         public Block(int blockSizerecieved)
         {
             _blockColor = RandColor.GetColor();
-            _newRectangle.Height = blockSizerecieved;
-            _newRectangle.Width = blockSizerecieved;
             blockSize = blockSizerecieved;
+            _newRectangle.Height = _blockSize;
+            _newRectangle.Width = _blockSize;
             do
             {
                 _newRectangle.X = _newRandom.Next(0, _Canvas.ScaledWidth);

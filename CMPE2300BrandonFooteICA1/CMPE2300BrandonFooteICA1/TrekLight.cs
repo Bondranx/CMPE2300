@@ -17,7 +17,8 @@ namespace CMPE2300BrandonFooteICA1
 
         Random _newRandom = new Random();
 
-        public TrekLight(Color LightColor, byte byThreshold, int Border=0)
+        public TrekLight(Color LightColor, byte byThreshold,
+            int Border=0)
         {
             _LightColor = LightColor;
             _byThreshold = byThreshold;
@@ -25,7 +26,8 @@ namespace CMPE2300BrandonFooteICA1
         }
         public TrekLight()
         {
-            _LightColor = Color.FromArgb(_newRandom.Next(0,255), _newRandom.Next(0,255), _newRandom.Next(0,255));
+            _LightColor = Color.FromArgb(_newRandom.Next(0,255),
+                _newRandom.Next(0,255), _newRandom.Next(0,255));
             _byThreshold = 64;
             _Border = 5;
             
@@ -39,8 +41,11 @@ namespace CMPE2300BrandonFooteICA1
         {
             if(_byTick>_byThreshold)
             {
-                _LightColor = Color.FromArgb(_newRandom.Next(0,255), _newRandom.Next(0,255), _newRandom.Next(0,255));
-                Canvas.AddRectangle(LightNumber % Canvas.ScaledWidth, LightNumber / Canvas.ScaledWidth, 1, 1, _LightColor, _Border, Color.Black);
+                _LightColor = Color.FromArgb(_newRandom.Next(0,255),
+                    _newRandom.Next(0,255), _newRandom.Next(0,255));
+                Canvas.AddRectangle(LightNumber % Canvas.ScaledWidth,
+                    LightNumber / Canvas.ScaledWidth, 1, 1, _LightColor,
+                    _Border, Color.Black);
                 _byTick = 0;
             }
 

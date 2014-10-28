@@ -87,6 +87,7 @@
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // rdbtnSize
             // 
@@ -98,6 +99,7 @@
             this.rdbtnSize.TabStop = true;
             this.rdbtnSize.Text = "Size";
             this.rdbtnSize.UseVisualStyleBackColor = true;
+            this.rdbtnSize.Click += new System.EventHandler(this.rdbtnSize_Click);
             // 
             // rdbtnDistance
             // 
@@ -109,6 +111,7 @@
             this.rdbtnDistance.TabStop = true;
             this.rdbtnDistance.Text = "Distance";
             this.rdbtnDistance.UseVisualStyleBackColor = true;
+            this.rdbtnDistance.Click += new System.EventHandler(this.rdbtnDistance_Click);
             // 
             // rdbtnColor
             // 
@@ -120,6 +123,7 @@
             this.rdbtnColor.TabStop = true;
             this.rdbtnColor.Text = "Color";
             this.rdbtnColor.UseVisualStyleBackColor = true;
+            this.rdbtnColor.Click += new System.EventHandler(this.rdbtnColor_Click);
             // 
             // ProgressBar1
             // 
