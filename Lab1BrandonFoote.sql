@@ -38,6 +38,7 @@ select	ProductID as 'Product ID',
 		UnitPrice as 'Unit Price',
 		Discontinued as 'Discontinued'
 from NorthwindTraders.dbo.Products
+order by ProductName asc
 end
 else if(@Category!=0)
 begin
@@ -50,6 +51,7 @@ from NorthwindTraders.dbo.Products as P
 inner join NorthwindTraders.dbo.Categories as C
 	on	C.CategoryID=P.CategoryID
 where @Category=C.CategoryID
+order by ProductName asc
 end
 go
 
@@ -69,7 +71,7 @@ create Proc GetSupplierForProduct
 @Product as integer
 as
 select	SupplierID	as 'Supplier ID',
-		CompanyName as 'Company Name',
+		CompanyName as 'Supplier Name',
 		ContactName as 'Contact Name',
 		Phone		as 'Phone Number',
 		Fax			as 'Fax Number',
@@ -187,17 +189,17 @@ drop procedure GetOrderDetails
 go
 
 create proc GetOrderDetails
-@Order as integer
+@OrderID as integer
 as
 select	P.ProductName as 'Product Name',
 		OD.UnitPrice as 'Unit Price',
 		OD.Quantity as 'Quantity',
 		OD.Discount as 'Discount',
-		Convert(Decimal(10,2),Round((OD.UnitPrice*OD.Quantity*(1-OD.Discount)),2)) as 'Total Cost'
+		Convert(Decimal(10,2),Round((OD.UnitPrice*OD.Quantity*(1-OD.Discount)),2)) as 'Item Total'
 from NorthwindTraders.dbo.[Order Details] as OD
 inner join NorthwindTraders.dbo.Products as P
 	on OD.ProductID=P.ProductID
-	where OrderID=@Order
+	where OrderID=@OrderID
 go
 
 exec GetOrderDetails 11011
